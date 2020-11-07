@@ -219,6 +219,7 @@ SECTION
   justify-content: center;
   flex-wrap: wrap;
   width: 100%;
+  padding: 0 1rem;
 }
 .form-input {
   padding: 0.4rem 0.7rem;
@@ -228,12 +229,19 @@ SECTION
   border-style: solid;
   letter-spacing: 2px;
   border-right: none;
-  width: 70%;
   max-width: 280px;
   border-color: var(--clr-grey-9);
   background: var(--clr-grey-9);
   color: var(--clr-black);
   font-weight: bold;
+}
+@media screen and (min-width: 481px) {
+  .form-input {
+    width: 70%;
+  }
+  .section-center {
+    width: 85%;
+  }
 }
 .form-input:focus {
   border-color: var(--clr-blue);
