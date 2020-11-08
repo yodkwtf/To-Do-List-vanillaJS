@@ -272,6 +272,10 @@ SECTION
   justify-content: space-between;
   align-items: center;
   padding: 0.4rem 0.7rem;
+  transition: var(--transition);
+}
+.task:hover {
+  transform: scale(1.1);
 }
 .task p {
   color: var(--clr-black);
@@ -322,6 +326,58 @@ SECTION
 .success {
   background: var(--clr-green-light);
   margin-bottom: 2rem;
+}
+.primary {
+  background: var(--clr-blue);
+  margin-bottom: 2rem;
+}
+
+/* MODAL */
+.modal-overlay {
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5));
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  visibility: hidden;
+  z-index: -10;
+  display: grid;
+  place-items: center;
+  text-align: center;
+}
+
+.open-modal {
+  visibility: visible;
+  z-index: 10;
+}
+
+.modal {
+  background: var(--clr-grey-10);
+  border-radius: var(--radius);
+  width: 90%;
+  max-width: var(--fixed-width);
+  padding: 2rem 1rem;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: block;
+}
+.modal h2 {
+  margin-bottom: 2rem;
+}
+.modal button {
+  outline: none;
+  border: 1px solid;
+  width: 40%;
+  padding: 0.5rem 0;
+  margin: 0 1rem;
+}
+.btn-container-2 {
+  display: flex;
+  justify-content: center;
+  padding: 0 5rem;
 }
 
 /* 
