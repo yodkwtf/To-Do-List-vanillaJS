@@ -3,6 +3,7 @@
 Fonts
 ===============
 */
+
 @import url('https://fonts.googleapis.com/css?family=Open+Sans|Roboto:400,700&display=swap');
 
 /*
@@ -41,9 +42,9 @@ Variables
   --clr-black: #222;
   /* particular colors */
   --clr-red-dark: hsl(360, 67%, 44%);
-  --clr-red-light: #e66b6b;
-  --clr-green-dark: hsl(125, 67%, 44%);
-  --clr-green-light: hsl(125, 71%, 66%);
+  --clr-red-light: #e24848;
+  --clr-green-dark: hsl(125, 69%, 46%);
+  --clr-green-light: hsl(125, 48%, 37%);
   --clr-blue: #166abb;
   /* font family */
   --ff-primary: 'Roboto', sans-serif;
@@ -158,12 +159,12 @@ p {
 
 /* section */
 section {
-  padding: 2rem 0;
+  padding: 4rem 0;
 }
 
 .section-center {
   width: 95vw;
-  margin: 0 auto;
+  margin: 4rem auto;
   max-width: 992px;
 }
 
@@ -366,6 +367,7 @@ SECTION
 }
 .modal h2 {
   margin-bottom: 2rem;
+  text-transform: none;
 }
 .modal button {
   outline: none;
