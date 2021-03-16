@@ -173,7 +173,7 @@ function setToDefault() {
   // empty input field
   formInput.value = '';
   // original border-color
-  formInput.style.borderColor = '#166abb';
+  formInput.style.borderColor = '#70c3f3';
   // no edit stage
   editStage = false;
   // no edit id
@@ -181,7 +181,9 @@ function setToDefault() {
   // original submit btn text
   submitBtn.textContent = 'add task';
   // original submit btn color
-  submitBtn.style.background = '#166abb';
+  submitBtn.style.background = `linear-gradient(
+    to bottom right, #0A83B0, #70c3f3
+  )`;
 }
 
 // =========== LOCAL STORAGE ===========

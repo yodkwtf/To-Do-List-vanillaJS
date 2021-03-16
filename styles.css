@@ -46,6 +46,23 @@ Variables
   --clr-green-dark: hsl(125, 69%, 46%);
   --clr-green-light: hsl(125, 48%, 37%);
   --clr-blue: #166abb;
+  --clr-blue-1: #70c3f3;
+  --clr-blue-2: #0A83B0;
+  --clr-blue-gradient: linear-gradient(
+    to bottom right,
+    var(--clr-blue-2),
+    var(--clr-blue-1)
+  );
+  --clr-red-gradient: linear-gradient(
+    to bottom right,
+    var(--clr-red-light),
+    var(--clr-red-dark)
+  );
+  --clr-green-gradient: linear-gradient(
+    to bottom right,
+    var(--clr-green-light),
+    var(--clr-green-dark)
+  );
   /* font family */
   --ff-primary: 'Roboto', sans-serif;
   --ff-secondary: 'Open Sans', sans-serif;
@@ -79,7 +96,10 @@ Global Styles
 
 body {
   font-family: var(--ff-secondary);
-  background: var(--clr-grey-9);
+  background: rgb(225, 212, 245);
+  background: linear-gradient(
+    to bottom right, #468297, #c2e3f7
+  );
   color: var(--clr-grey-1);
   line-height: 1.5;
   font-size: 0.875rem;
@@ -197,8 +217,8 @@ HEADER
 header h1 {
   margin: 4rem 0 -2rem;
   text-transform: uppercase;
-  color: var(--clr-blue);
-  text-shadow: 1px 1px 0px var(--clr-black);
+  color: var(--clr-white);
+  text-shadow: 2px 2px 2px var(--clr-black);
 }
 
 /* 
@@ -206,6 +226,7 @@ header h1 {
 SECTION
 =====================
 */
+
 
 .section-center {
   background: var(--clr-white);
@@ -245,11 +266,11 @@ SECTION
   }
 }
 .form-input:focus {
-  border-color: var(--clr-blue);
+  border-color: var(--clr-blue-1);
 }
 .submit-btn {
-  background: var(--clr-blue);
-  border: 1px solid var(--clr-blue);
+  background: var(--clr-blue-gradient);
+  border: 1.5px solid var(--clr-blue-1);
   border-top-right-radius: var(--radius);
   border-bottom-right-radius: var(--radius);
 }
@@ -266,7 +287,7 @@ SECTION
   background: var(--clr-grey-10);
 }
 .task:nth-of-type(odd) {
-  background: rgba(215, 215, 215, 0.1);
+  background: rgba(205, 205, 205, 0.1);
 }
 .task {
   display: flex;
@@ -276,7 +297,7 @@ SECTION
   transition: var(--transition);
 }
 .task:hover {
-  transform: scale(1.1);
+  transform: scale(1.01);
 }
 .task p {
   color: var(--clr-black);
@@ -305,7 +326,7 @@ SECTION
 
 .clear-btn {
   margin: 2rem 0 0rem;
-  background: var(--clr-red-dark);
+  background: var(--clr-red-gradient);
   border: 1px solid var(--clr-red-dark);
   border-radius: var(--radius);
   padding: 0.5rem 0.8rem;
@@ -321,15 +342,15 @@ SECTION
   color: var(--clr-white);
 }
 .danger {
-  background: var(--clr-red-light);
+  background: var(--clr-red-gradient);
   margin-bottom: 2rem;
 }
 .success {
-  background: var(--clr-green-light);
+  background: var(--clr-green-gradient);
   margin-bottom: 2rem;
 }
 .primary {
-  background: var(--clr-blue);
+  background: var(--clr-blue-gradient);
   margin-bottom: 2rem;
 }
 
@@ -358,7 +379,7 @@ SECTION
   border-radius: var(--radius);
   width: 90%;
   max-width: var(--fixed-width);
-  padding: 2rem 1rem;
+  padding: 4rem 1rem;
   position: absolute;
   top: 50%;
   left: 50%;
@@ -373,7 +394,7 @@ SECTION
   outline: none;
   border: 1px solid;
   width: 40%;
-  padding: 0.5rem 0;
+  padding: 0.65rem 0;
   margin: 0 1rem;
 }
 .btn-container-2 {
