@@ -47,7 +47,7 @@ Variables
   --clr-green-light: hsl(125, 48%, 37%);
   --clr-blue: #166abb;
   --clr-blue-1: #70c3f3;
-  --clr-blue-2: #0A83B0;
+  --clr-blue-2: #0a83b0;
   --clr-blue-gradient: linear-gradient(
     to bottom right,
     var(--clr-blue-2),
@@ -96,10 +96,7 @@ Global Styles
 
 body {
   font-family: var(--ff-secondary);
-  background: rgb(225, 212, 245);
-  background: linear-gradient(
-    to bottom right, #468297, #c2e3f7
-  );
+  background: linear-gradient(to bottom right, #468297, #c2e3f7);
   color: var(--clr-grey-1);
   line-height: 1.5;
   font-size: 0.875rem;
@@ -193,6 +190,7 @@ main {
   display: grid;
   place-items: center;
   grid-template-rows: auto 1fr auto;
+  position: relative;
 }
 
 .btn {
@@ -226,7 +224,6 @@ header h1 {
 SECTION
 =====================
 */
-
 
 .section-center {
   background: var(--clr-white);
